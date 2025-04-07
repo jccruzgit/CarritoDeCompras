@@ -1,0 +1,20 @@
+server:
+  port: 8084
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:authdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  secret: 4fb6a1e8aa9973cb3905da8fa7e9b12c_secure_jwt_key
+  expiration: 3600000  # 1 hora en ms
